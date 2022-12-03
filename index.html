@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoリスト</title>
+		<link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            min-width: 300px;
+        }
+        th {
+            text-align: left;
+        }
+        button {
+            width: 60px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDoリスト</h1>
+		<h2>新規タスクの追加</h2>
+    <form>
+        <input type="text" name="add-task" id="new-task">
+        <input type="button" value="追加" id="add-task">
+    </form>
+		<div id="table">
+			<ul class="task_list"></ul>
+		
+		<form name="select-status">
+        <input type="radio" name="state" id="all" value="all" checked>すべて
+        <input type="radio" name="state" id="wip" value="wip">途中
+        <input type="radio" name="state" id="done" value="done">完了
+    </form>
+		<table class="task-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>コメント</th>
+                <th>状態</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+			</div>	
+    </table>
+    <script src="./task.js"></script>
+</body>
+</html>
